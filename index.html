@@ -8,49 +8,68 @@
     <meta name="Description" content="Enter your description here" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Title</title>
-    <script>
-        function validate() {
-            var nrp = document.getElementById("nrp");
-            var msg = document.getElementById("msg");
-            if (isNaN(nrp.value) )  {
-                nrp.focus();
-                msg.innerHTML = "harus";
-                nrp.placeholder = "Contoh 234561241";
-                return false;
-            }
-            
-            if(nrp.value.length != 10){
-                msg.innerHTML = "NRP harus 10 digit";
-                return false;
-            }
-        }
-    </script>
 
+    <style>
+        /* Gaya awal sebelum hovering */
+        .navbar-nav .nav-link {
+            transition: color 0.5s;
+            color: rgba(0, 0, 0, 0.375) !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: white !important;
+        }
+
+
+        .navbar-nav .nav-item {
+            transition: background-color 0.5s, color 0.5s, border-radius 0.5s, border 0.5s;
+            border: 2px solid transparent;
+            /* Tambahkan border dalam gaya awal */
+            border-radius: 5px;
+        }
+
+        .navbar-nav .nav-item:hover {
+            background-color: #007bff;
+            /* Ubah warna latar belakang pada hover */
+            border-radius: 15px;
+            border: 2px solid transparent;
+            /* Mengubah warna border pada hover */
+        }
+    </style>
 </head>
 
-<body>
+<body class="container">
+    <nav class="navbar navbar-expand-lg navbar-light border py-lg-3">
+        <img class="m-0 p-0" src="Assets/Logo.png" alt="Logo" width="150" height="auto">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="container">
-        <div class="jumbotron">
-            Form validasi adalah mencegah pengiriman data ke server jika ada yang invalid/tidak sesuai constrain
-            database
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item mx-3 px-3">
+                    <a class="nav-link " href="#">Home</a>
+                </li>
+                <li class="nav-item mx-3 px-3">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item mx-3 px-3">
+                    <a class="nav-link" href="#">Service</a>
+                </li>
+                <li class="nav-item mx-3 px-3">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item mx-3 px-3">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
         </div>
-        <form action="" method="get" onsubmit="validate()">
-            <div class="form-group">
-                <div id="msg">asgg</div>
-                <label for="nrp">NRP</label>
-                <input type="text" class="form-control" id="nrp" >
-            </div>
-            <input type="submit" value="DAFTAR" class="btn btn-primary">
-            <input type="reset" value="ULANGI" class="btn btn-warning">
-        </form>
-    </div>
+    </nav>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <!-- Konten lainnya -->
 </body>
 
 </html>
