@@ -1,11 +1,16 @@
 body {
     font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+background: rgba(255, 255, 255, 0);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
 }
 
 .navbar-nav .nav-link {
@@ -26,7 +31,7 @@ nav {
 }
 
 .navbar-nav .nav-item:hover {
-    background-color: #007bff;
+    background-color: #007BFF;
     /* Ubah warna latar belakang pada hover */
     border-radius: 15px;
     border: 2px solid transparent;
@@ -34,22 +39,32 @@ nav {
 }
 
 .img {
-    width: 465px;
+    width: 500px;
     float: right;
     filter: drop-shadow(8px 11px 36px #66666669);
     -webkit-filter: drop-shadow(8px 11px 36px #66666669);
 }
 
-.text-greeting{
+.img2 {
+    width: 448px;
+    float: right;
+    filter: drop-shadow(8px 11px 36px #66666669);
+    -webkit-filter: drop-shadow(8px 11px 36px #66666669);
+}
+
+.text-greeting {
     font-size: 42px;
     margin-top: 50px;
 }
-.text-describe{
+
+.text-describe {
     font-size: 60px;
 }
-.intro-page{
+
+.intro-page {
     margin-top: 60px;
 }
-.oddSection{
+
+.oddSection {
     background: #F8F9FD;
 }
