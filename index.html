@@ -12,10 +12,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="style.css">
+
     <title>Title</title>
 </head>
 
@@ -29,11 +31,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item mx-3 px-3">
-                        <a class="nav-link" href="#clickThis">Home</a>
+                    <li class="nav-item mx-3 px-3 active">
+                        <a class="nav-link active" href="">Home</a>
                     </li>
                     <li class="nav-item mx-3 px-3">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link " href="#">About</a>
                     </li>
                     <li class="nav-item mx-3 px-3">
                         <a class="nav-link" href="#">Service</a>
@@ -55,7 +57,7 @@
             <div class="row ">
                 <div class="col-7 intro-page ">
                     <div class="container mt-5 pt-5 ">
-
+                        
                         <h3 class="text-greeting">Hello mate&#128075;</h3>
                         <h1 class="text-describe">I'm Alif Faturrohman</h1=>
                             <h1 class="text-describe">a <span class="text-primary">Web Developer</span></h1>
@@ -66,7 +68,13 @@
                     </div>
                 </div>
                 <div class="col-5 intro-page  ">
-                    <img class="img" src="Assets/profilePhoto.png" alt="profile photo">
+                    <img class="img" src="Assets/profilePhoto.png"  alt="profile photo">
+                    <img src="Assets/css.png"
+                        class="img-icon icon-1 animate__animated animate__shakeY animate__infinite" alt="">
+                    <img src="Assets/javascript.png"
+                        class="img-icon icon-2 animate__animated animate__shakeY animate__infinite" alt="">
+                    <img src="Assets/html.png"
+                        class="img-icon icon-3 animate__animated animate__shakeY animate__infinite" alt="">
                 </div>
             </div>
         </div>
@@ -83,8 +91,8 @@
 
                 <div class="col-6 pl-5">
                     <div class="container">
-
-                        <h3 class="display-4 font-weight-bolder mx-auto">About Me</h3>
+                        <h1 class="text-primary my-0">My Intro</h1>
+                        <h3 class="display-4 font-weight-bolder mt-0">About Me</h3>
                         <p>I am a student of ITS Information Systems, and as a youth from Central Java, I have a strong
                             enthusiasm for IT</p>
                         <table>
@@ -112,7 +120,7 @@
                                 <td class="pr-3 font-weight-bold">Phone :</td>
                                 <td class="pl-5">+62 836-5711-0027</td>
                             </tr>
-    
+
                         </table>
                     </div>
                 </div>
@@ -120,8 +128,12 @@
         </div>
     </section>
 
+    <section>
+        
+    </section>
 
-    <footer class="text-white text-lg-start bg-primary ">
+
+    <footer class="text-white text-lg-start bg-primary">
         <!-- Grid container -->
         <div class="container p-4">
             <!--Grid row-->
