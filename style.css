@@ -8,9 +8,9 @@ nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-background: rgba(255, 255, 255, 0);
-backdrop-filter: blur(20px);
--webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .navbar-nav .nav-link {
@@ -21,7 +21,6 @@ backdrop-filter: blur(20px);
 .navbar-nav .nav-link:hover {
     color: white !important;
 }
-
 
 .navbar-nav .nav-item {
     transition: background-color 0.5s, color 0.5s, border-radius 0.5s, border 0.5s;
@@ -35,14 +34,26 @@ backdrop-filter: blur(20px);
     /* Ubah warna latar belakang pada hover */
     border-radius: 15px;
     border: 2px solid transparent;
-    /* Mengubah warna border pada hover */
 }
+
+.navbar-nav .nav-item.active {
+    background-color: #007BFF;
+    border-radius: 15px;
+    border: 2px solid transparent;
+}
+
+.navbar-nav .nav-link.active {
+    text-decoration: none !important;
+    color: white !important;
+}
+
 
 .img {
     width: 500px;
     float: right;
     filter: drop-shadow(8px 11px 36px #66666669);
     -webkit-filter: drop-shadow(8px 11px 36px #66666669);
+    filter: brightness(120%);
 }
 
 .img2 {
@@ -50,6 +61,41 @@ backdrop-filter: blur(20px);
     float: right;
     filter: drop-shadow(8px 11px 36px #66666669);
     -webkit-filter: drop-shadow(8px 11px 36px #66666669);
+    filter: brightness(125%);
+}
+
+.img-icon {
+    position: absolute;
+
+}
+
+.icon-1 {
+    width: 135px;
+    bottom: 120px;
+    left: 20px;
+    filter: drop-shadow(-7.5px 10px 30px #0d6efdc1) brightness(150%);
+}
+
+
+.icon-2 {
+    width: 150px;
+    animation-delay: 1s;
+    bottom: 0px;
+    right: 10px;
+    filter: drop-shadow(-7.5px 10px 30px #ffc107c1) brightness(150%);
+}
+
+.icon-3 {
+    width: 150px;
+    animation-delay: 2s;
+    top: 100px;
+    right: 20px;
+    filter: drop-shadow(-7.5px 10px 30px #fd7d14c1) brightness(150%);
+}
+
+.animate__shakeY {
+    animation-duration: 50s;
+    transform-origin: center;
 }
 
 .text-greeting {
@@ -68,3 +114,4 @@ backdrop-filter: blur(20px);
 .oddSection {
     background: #F8F9FD;
 }
+
