@@ -94,7 +94,7 @@ nav {
 }
 
 .animate__shakeY {
-    animation-duration: 50s;
+    animation-duration: 30s;
     transform-origin: center;
 }
 
@@ -115,3 +115,27 @@ nav {
     background: #F8F9FD;
 }
 
+.card{
+    border-radius: 30px !important;
+    height: 250px;
+}
+
+.imgService{
+    filter: opacity(75%);
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #e1e1e1;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carouselColumn{
+    height: 500px !important;
+    margin-bottom: 50px;
+}
