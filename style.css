@@ -25,18 +25,16 @@ nav {
 .navbar-nav .nav-item {
     transition: background-color 0.5s, color 0.5s, border-radius 0.5s, border 0.5s;
     border: 2px solid transparent;
-    /* Tambahkan border dalam gaya awal */
     border-radius: 5px;
 }
 
 .navbar-nav .nav-item:hover {
     background-color: #007BFF;
-    /* Ubah warna latar belakang pada hover */
     border-radius: 15px;
     border: 2px solid transparent;
 }
 
-.navbar-nav .nav-item.active {
+.navbar-nav .active {
     background-color: #007BFF;
     border-radius: 15px;
     border: 2px solid transparent;
@@ -46,7 +44,6 @@ nav {
     text-decoration: none !important;
     color: white !important;
 }
-
 
 .img {
     width: 500px;
@@ -111,19 +108,19 @@ nav {
     margin-top: 60px;
 }
 
-.oddSection {
-    background: #F8F9FD;
+.homePage {
+    background: white;
 }
 
 .card{
-    border-radius: 30px !important;
+    border-radius: 30px;
     height: 250px;
+    backdrop-filter: blur(19px) saturate(200%);
+    -webkit-backdrop-filter: blur(19px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 3px solid rgba(209, 213, 219, 0.3);
+    
 }
-
-.imgService{
-    filter: opacity(75%);
-}
-
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -136,6 +133,28 @@ nav {
 }
 
 .carouselColumn{
-    height: 500px !important;
+    height: 600px !important;
     margin-bottom: 50px;
+}
+
+.aboutMe{
+    backdrop-filter: blur(19px) saturate(200%);
+    -webkit-backdrop-filter: blur(19px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    
+}
+
+.form-control::placeholder {
+    font-size: 14px;
+    color: gray;
+}
+
+.form-control{
+    font-size: 14px;
+}
+
+.cardPage{
+    height: 600px !important;
 }
