@@ -20,9 +20,108 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Title</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var cards = document.querySelectorAll('.cardService');
+
+            cards.forEach(function (card) {
+                card.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+
+                card.addEventListener('mousemove', function (e) {
+
+                    var x = e.clientX - card.getBoundingClientRect().left - card.clientWidth / 2;
+                    var y = e.clientY - card.getBoundingClientRect().top - card.clientHeight / 2;
+
+                    card.style.transform = 'rotateX(' + -y / 10 + 'deg) rotateY(' + x / 10 + 'deg)';
+
+                    card.style.boxShadow = x / 10 + 'px ' + y / 10 + 'px 15px #1988ff49';
+                });
+
+                card.addEventListener('mouseout', function (e) {
+                    card.style.transform = '';
+                    card.style.boxShadow = '';
+                });
+            });
+        });
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var cards = document.querySelectorAll('.cardPage');
+
+            cards.forEach(function (card) {
+                card.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+
+                card.addEventListener('mousemove', function (e) {
+
+                    var x = e.clientX - card.getBoundingClientRect().left - card.clientWidth / 2;
+                    var y = e.clientY - card.getBoundingClientRect().top - card.clientHeight / 2;
+
+                    card.style.transform = 'rotateX(' + -y / 30 + 'deg) rotateY(' + x / 30 + 'deg)';
+
+                    card.style.boxShadow = x / 30 + 'px ' + y / 30 + 'px 15px #1988ff49';
+                });
+
+                card.addEventListener('mouseout', function (e) {
+                    card.style.transform = '';
+                    card.style.boxShadow = '';
+                });
+            });
+        });
+
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var cards = document.querySelectorAll('.cardService');
+
+        cards.forEach(function (card) {
+            card.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+
+            card.addEventListener('mousemove', function (e) {
+
+                var x = e.clientX - card.getBoundingClientRect().left - card.clientWidth / 2;
+                var y = e.clientY - card.getBoundingClientRect().top - card.clientHeight / 2;
+
+                card.style.transform = 'rotateX(' + -y / 10 + 'deg) rotateY(' + x / 20 + 'deg)';
+
+                card.style.boxShadow = x / 10 + 'px ' + y / 10 + 'px 15px #1988ff49';
+            });
+
+            card.addEventListener('mouseout', function (e) {
+                card.style.transform = '';
+                card.style.boxShadow = '';
+            });
+        });
+    });
+
+</script>
+
 </head>
 
 <body>
+    <script>
+        // Function to update the active navigation item
+        function updateActiveNavItem() {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".navbar-nav a.nav-link");
+    
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 150 && rect.bottom >= 150) {
+                    navLinks[index].classList.add("active");
+                } else {
+                    navLinks[index].classList.remove("active");
+                }
+            });
+        }
+    
+        // Event listener for scroll
+        window.addEventListener("scroll", updateActiveNavItem);
+        
+        // Initial call to set the active item on page load
+        updateActiveNavItem();
+    </script>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-xl">
             <img src="Assets/Logo.png" alt="Logo" width="150" height="auto">
@@ -32,20 +131,20 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item mx-3 px-3 active">
-                        <a class="nav-link active" href="">Home</a>
+                    <li class="nav-item mx-3 ">
+                        <a class="nav-link active px-4" href="#home">Home</a>
                     </li>
-                    <li class="nav-item mx-3 px-3">
-                        <a class="nav-link " href="#">About</a>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link px-4" href="#aboutMe">About</a>
                     </li>
-                    <li class="nav-item mx-3 px-3">
-                        <a class="nav-link" href="#">Service</a>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link px-4" href="#servicePage">Service</a>
                     </li>
-                    <li class="nav-item mx-3 px-3">
-                        <a class="nav-link" href="#">Blog</a>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link px-4" href="#blogPage">Blog</a>
                     </li>
-                    <li class="nav-item mx-3 px-3">
-                        <a class="nav-link" href="#">Contact</a>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link px-4" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -53,7 +152,7 @@
     </nav>
 
 
-    <section class="oddSection ">
+    <section id="home" class="homePage">
         <div class="container">
             <div class="row ">
                 <div class="col-7 intro-page ">
@@ -82,16 +181,16 @@
         </div>
     </section>
 
-    <section>
-        <div class="container pt-xl-5 mt-5">
+    <section id="aboutMe" class="pt-5">
+        <div class="container pt-xl-5 ">
 
             <div class="row mt-4 pt-4">
                 <div class="col-xl-6">
                     <img src="Assets/photoProfile2.png" class="img2" alt="">
                 </div>
 
-                <div class="col-6 pl-5">
-                    <div class="container">
+                <div class="col-6 pl-5 ">
+                    <div class="container  aboutMe p-5">
                         <h1 class="text-primary my-0">My Intro</h1>
                         <h3 class="display-4 font-weight-bolder mt-0">About Me</h3>
                         <p>I am a student of ITS Information Systems, and as a youth from Central Java, I have a strong
@@ -129,38 +228,13 @@
         </div>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var cards = document.querySelectorAll('.card');
-
-            cards.forEach(function (card) {
-                card.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
-
-                card.addEventListener('mousemove', function (e) {
-
-                    var x = e.clientX - card.getBoundingClientRect().left - card.clientWidth / 2;
-                    var y = e.clientY - card.getBoundingClientRect().top - card.clientHeight / 2;
-
-                    card.style.transform = 'rotateX(' + -y / 20 + 'deg) rotateY(' + x / 20 + 'deg)';
-
-                    card.style.boxShadow = x / 20 + 'px ' + y / 20 + 'px 15px rgba(0,0,0,0.2)';
-                });
-
-                card.addEventListener('mouseout', function (e) {
-                    card.style.transform = '';
-                    card.style.boxShadow = '';
-                });
-            });
-        });
-
-    </script>
-    <section class="service  bg-light pb-5">
+    <section id="servicePage" class="service bg-light pb-5">
         <div class="container  pt-5">
             <h3 class="display-4 font-weight-bolder text-center text-capitalize">Service</h3>
             <h1 class="text-primary text-center mb-5">What i do for my clients?</h1>
             <div class="row text-center">
                 <div class="col part">
-                    <div class="card pt-4">
+                    <div class="cardService card pt-4">
                         <div class="card-body">
                             <img src="Assets/web-icon.png" class="imgService w-50" alt="">
                             <h5 class="py-4 px-3">Website Development</h5>
@@ -168,7 +242,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card pt-4">
+                    <div class="cardService card pt-4">
                         <div class="card-body">
                             <img src="Assets/curve.png" class="imgService w-50" alt="">
                             <h5 class="py-4 mt-3">Graphic Design</h5>
@@ -176,7 +250,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card pt-4">
+                    <div class="cardService card pt-4">
                         <div class="card-body">
                             <img src="Assets/bar-chart.png" class="imgService w-50" alt="">
                             <h5 class="py-4 mt-3">Data Management</h5>
@@ -184,7 +258,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card pt-4">
+                    <div class="cardService card pt-4">
                         <div class="card-body">
                             <img src="Assets/camera.png" class="imgService w-50" alt="">
                             <h5 class="py-4 mt-3">Photography</h5>
@@ -195,27 +269,27 @@
             <div class="row text-center mt-4 mx-auto">
                 <div class="col-3"></div>
                 <div class="col-3">
-                    <div class="card pt-4">
+                    <div class="cardService card pt-4">
                         <div class="card-body">
-                            <img src="Assets/curve.png" class="imgService w-50" alt="">
-                            <h5 class="py-4 mt-3">Graphic Design</h5>
+                            <img src="Assets/video.png" class="imgService w-50" alt="">
+                            <h5 class="py-4 mt-3">Videography</h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
-                    <div class="card pt-4">
+                    <div class="cardService card pt-4">
                         <div class="card-body">
-                            <img src="Assets/bar-chart.png" class="imgService w-50" alt="">
-                            <h5 class="py-4 mt-3">Data Management</h5>
+                            <img src="Assets/consultant.png" class="imgService w-50" alt="">
+                            <h5 class="py-4 mt-3">IT Consultant</h5>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
 
-    <section class="blog pb-5">
+    <section id="blogPage" class="blog">
         <div class="container">
             <h1 class="display-3 font-weight-bolder text-primary text-capitalize mt-5">Blog</h1>
             <h2>Our Latest Blogs</h2>
@@ -226,37 +300,43 @@
                         <div class="row pt-4 px-4 pb-5">
                             <div class="card col mx-3 px-0 h-100 cardPage">
                                 <div class="card-img px-0">
-                                    <img src="Assets/samsungGalaxy.png" class="img-fluid" style="border-radius: 30px 30px 0px 0px;" alt="">
+                                    <img src="Assets/samsungGalaxy.png" class="img-fluid"
+                                        style="border-radius: 30px 30px 0px 0px;" alt="">
                                 </div>
                                 <div class="card-body">
                                     <h4>Review Samsung Galaxy S22</h4>
-                                    <p class="pb-3">Smartphone flagship terbaru dari Samsung yang memiliki fitur canggih seperti
+                                    <p class="pb-3">Smartphone flagship terbaru dari Samsung yang memiliki fitur canggih
+                                        seperti
                                         kamera 108 MP, baterai 5000 mAh, dan layar 120 Hz.</p>
-                                    <button class="btn btn-primary text-capitalize mt-4">read more &nbsp; <i
+                                    <button class="btn btn-primary text-capitalize mt-5">read more &nbsp; <i
                                             class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></button>
                                 </div>
                             </div>
-                            <div class="card col mx-3 px-0 h-100">
+                            <div class="card col mx-3 px-0 h-100 cardPage">
                                 <div class="card-img px-0">
-                                    <img src="Assets/machineLearning.png" class="img-fluid" style="border-radius: 30px 30px 0px 0px;" alt="">
+                                    <img src="Assets/machineLearning.png" class="img-fluid"
+                                        style="border-radius: 30px 30px 0px 0px;" alt="">
                                 </div>
                                 <div class="card-body">
                                     <h4>Pengenalan Machine Learning untuk Pemula</h4>
-                                    <p class="pb-3">Apa itu machine learning? Bagaimana cara kerjanya? Dan apa manfaatnya bagi dunia?
+                                    <p class="pb-3 mb-3">Apa itu machine learning? Bagaimana cara kerjanya? Dan apa
+                                        manfaatnya bagi dunia?
                                         Temukan jawabannya di blog ini</p>
                                     <button class="btn btn-primary text-capitalize mt-5">read more &nbsp; <i
                                             class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></button>
                                 </div>
                             </div>
-                            <div class="card col mx-3 px-0 h-100">
+                            <div class="card col mx-3 px-0 h-100 cardPage">
                                 <div class="card-img px-0">
-                                    <img src="Assets/blockchain.png" class="img-fluid" style="border-radius: 30px 30px 0px 0px;" alt="">
+                                    <img src="Assets/blockchain.png" class="img-fluid"
+                                        style="border-radius: 30px 30px 0px 0px;" alt="">
                                 </div>
                                 <div class="card-body ">
                                     <h4>Perkembangan Teknologi Blockchain dan Aplikasinya di Berbagai Bidang</h4>
-                                    <p class="pb-1"> Blockchain adalah teknologi yang mampu menyimpan data secara terdesentralisasi
+                                    <p class="pb-2"> Blockchain adalah teknologi yang mampu menyimpan data secara
+                                        terdesentralisasi
                                         dan transparan</p>
-                                    <button class="btn btn-primary text-capitalize mt-1">read more &nbsp; <i
+                                    <button class="btn btn-primary text-capitalize mt-4">read more &nbsp; <i
                                             class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></button>
                                 </div>
                             </div>
@@ -264,36 +344,42 @@
                     </div>
                     <div class="carousel-item">
                         <div class="row pt-4 px-4 pb-5">
-                            <div class="card col mx-3 px-0 h-100">
+                            <div class="card col mx-3 px-0 h-100 cardPage">
                                 <div class="card-img px-0">
-                                    <img src="Assets/laptopGaming.png" class="img-fluid" style="border-radius: 30px 30px 0px 0px;" alt="">
+                                    <img src="Assets/laptopGaming.png" class="img-fluid"
+                                        style="border-radius: 30px 30px 0px 0px;" alt="">
                                 </div>
                                 <div class="card-body">
                                     <h4>Tips Memilih Laptop Gaming yang Sesuai dengan Kebutuhan</h4>
-                                    <p class="pb-3">Anda suka bermain game di laptop? Jika ya, maka Anda perlu memilih laptop gaming yang sesuai dengan kebutuhan Anda.</p>
-                                    <button class="btn btn-primary text-capitalize">read more &nbsp; <i
+                                    <p class="pb-3">Anda suka bermain game di laptop? Jika ya, maka Anda perlu memilih
+                                        laptop gaming yang sesuai dengan kebutuhan Anda.</p>
+                                    <button class="btn btn-primary text-capitalize mt-3">read more &nbsp; <i
                                             class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></button>
                                 </div>
                             </div>
-                            <div class="card col mx-3 px-0 h-100">
+                            <div class="card col mx-3 px-0 h-100 cardPage">
                                 <div class="card-img px-0">
-                                    <img src="Assets/editVideo.png" class="img-fluid" style="border-radius: 30px 30px 0px 0px;" alt="">
+                                    <img src="Assets/editVideo.png" class="img-fluid"
+                                        style="border-radius: 30px 30px 0px 0px;" alt="">
                                 </div>
                                 <div class="card-body">
                                     <h4>Tips dan Trik Editing Video untuk Pemula</h4>
-                                    <p class="pb-3">Jika Anda baru mulai belajar editing video, blog ini cocok untuk Anda. Blog ini berisi tips dan trik untuk membuat video Anda lebih keren</p>
-                                    <button class="btn btn-primary text-capitalize mt-4">read more &nbsp; <i
+                                    <p class="pb-3">Jika Anda baru mulai belajar editing video, blog ini cocok untuk
+                                        Anda. Blog ini berisi tips dan trik untuk membuat video Anda lebih keren</p>
+                                    <button class="btn btn-primary text-capitalize mt-5">read more &nbsp; <i
                                             class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></button>
                                 </div>
                             </div>
-                            <div class="card col mx-3 px-0 h-100">
+                            <div class="card col mx-3 px-0 h-100 cardPage">
                                 <div class="card-img px-0">
-                                    <img src="Assets/website.png" class="img-fluid" style="border-radius: 30px 30px 0px 0px;" alt="">
+                                    <img src="Assets/website.png" class="img-fluid"
+                                        style="border-radius: 30px 30px 0px 0px;" alt="">
                                 </div>
                                 <div class="card-body px-3">
                                     <h4>Cara Mudah Membuat Website</h4>
-                                    <p class="pb-3"> Apakah Anda ingin membuat website sendiri tanpa harus menguasai bahasa pemrograman? Temukan jawabannya di blog ini</p>
-                                    <button class="btn btn-primary text-capitalize mt-4">read more &nbsp; <i
+                                    <p class="pb-3"> Apakah Anda ingin membuat website sendiri tanpa harus menguasai
+                                        bahasa pemrograman? Temukan jawabannya di blog ini</p>
+                                    <button class="btn btn-primary text-capitalize mt-5">read more &nbsp; <i
                                             class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></button>
                                 </div>
                             </div>
@@ -313,7 +399,114 @@
         </div>
     </section>
 
-    
+    <section id="contact" class="mt-5">
+        <div class="container">
+            <div class="card h-100 mb-5">
+                <div class="row pb-5">
+                    <div class="col-6 pl-5">
+                        <h1 class="display-4 font-weight-bolder text-primary text-capitalize mt-5">Contact Us</h1>
+                        <p>Please use our contact form for all information requests or contact us directly using the
+                            contact information below. All information will be treated with complete confidentiality.
+                        </p>
+                        <form id="myForm" class="mt-4">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="text" name="firstName" id="firstName" class="form-control"
+                                            placeholder="First Name">
+                                        <small id="firstNameAlert" class="form-text text-danger"></small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="text" name="lastName" id="lastName" class="form-control"
+                                            placeholder="Last Name">
+                                        <small id="lastNameAlert" class="form-text text-danger"></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" id="email"
+                                            placeholder="Email">
+                                        <small id="emailAlert" class="form-text text-danger"></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="text" name="company" id="company" class="form-control"
+                                            placeholder="Company Name">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="text" name="position" id="position" class="form-control"
+                                            placeholder="Position">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                                    <textarea class="form-control" name="message" id="message" rows="3"
+                                        placeholder="Message"></textarea>
+                                    <small id="messageAlert" class="form-text text-danger"></small>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <button type="button" id="submitButton" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        <script>
+                            document.getElementById('submitButton').addEventListener('click', function () {
+                                document.getElementById('firstNameAlert').textContent = '';
+                                document.getElementById('lastNameAlert').textContent = '';
+                                document.getElementById('emailAlert').textContent = '';
+                                document.getElementById('messageAlert').textContent = '';
+
+                                const firstName = document.getElementById('firstName').value;
+                                if (firstName === '') {
+                                    document.getElementById('firstNameAlert').textContent = 'Please fill the form';
+                                } else if (!/^[A-Za-z]+$/.test(firstName)) {
+                                    document.getElementById('firstNameAlert').textContent = 'Form cannot be filled with numbers';
+                                }
+
+                                const lastName = document.getElementById('lastName').value;
+                                if (lastName === '') {
+                                    document.getElementById('lastNameAlert').textContent = 'Please fill the form';
+                                } else if (!/^[A-Za-z]+$/.test(lastName)) {
+                                    document.getElementById('lastNameAlert').textContent = 'Form cannot be filled with numbers';
+                                }
+
+                                const email = document.getElementById('email').value;
+                                if (email === '') {
+                                    document.getElementById('emailAlert').textContent = 'Please fill the form';
+                                } else if (!email.includes('@')) {
+                                    document.getElementById('emailAlert').textContent = 'Please fill with an email address';
+                                }
+
+                                const message = document.getElementById('message').value;
+                                if (message === '') {
+                                    document.getElementById('messageAlert').textContent = 'Please fill the form';
+                                }
+                            });
+                        </script>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center align-items-center">
+                        <img src="Assets/contact.png" class="w-75" alt=""
+                            style="filter: drop-shadow(0px 8px 75px 13px rgb(0, 153, 255));">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="text-white text-lg-start bg-primary">
         <div class="container p-4">
             <div class="row mt-4">
@@ -321,14 +514,9 @@
                     <h5 class="text-uppercase mb-4">About</h5>
 
                     <p>
-                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                        voluptatum deleniti atque corrupti.
+                        I am a student of ITS Information Systems, and as a youth from Central Java, I have a strong enthusiasm for IT
                     </p>
 
-                    <p>
-                        Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-                        molestias.
-                    </p>
 
                     <div class="mt-4">
                         <a type="button" class="btn btn-floating btn-warning btn-lg"><i
@@ -343,17 +531,12 @@
                 <div class="col-lg-4 mb-4 pl-5">
                     <h5 class="text-uppercase mb-4">Service</h5>
                     <ul class="fa-ul mt-4 ml-0">
-                        <li class="mb-3">
-                            <span class="fa-li"></span>Surabaya,
-                            Surabaya, East Java 60111</span>
-                        </li>
-                        <li class="mb-3">
-                            <span class="fa-li"></span>aliffaturrohman11@gmail.com
-                        </li>
-                        <li class="mb-3">
-                            <span class="fa-li"></span>+62 836-5711-0027
-                        </li>
-
+                        <li>Website Development</li>
+                        <li>Graphic Design</li>
+                        <li>Data Management</li>
+                        <li>Photography</li>
+                        <li>Videography</li>
+                        <li>IT Consultant</li>
                     </ul>
                 </div>
 
@@ -376,7 +559,7 @@
             </div>
         </div>
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 1523 Copyright:
+            © 2023 Copyright:
             <a class="text-white" href="https://aliffaturrohman.github.io/">aliffaturrohman.github.io</a>
         </div>
     </footer>
